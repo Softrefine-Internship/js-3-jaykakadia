@@ -22,4 +22,13 @@
 // Output: 
 // total value for "price": 1850
 // total value for "quantity": 6
-
+function calculateTotalValue(arr) {
+    let totalPrice = 0;
+    let totalQuantity = 0;
+    for (let i = 0; i < arr.length; i++) {
+        totalPrice += arr[i].price;
+        totalQuantity += arr[i].quantity;
+    }
+    return { totalPrice, totalQuantity };
+}
+console.log(calculateTotalValue(arr));

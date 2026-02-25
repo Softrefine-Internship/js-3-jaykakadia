@@ -13,3 +13,20 @@
 
 // Output: 1 (index of an object for prop_1: 'val_4')
 
+const arrayObj = [{
+    prop_1: 'val_1',
+    prop_2: 'val_2',
+    prop_3: 'val_3'
+}, {
+    prop_1: 'val_4',
+    prop_2: 'val_5',
+    prop_3: 'val_6'
+}];
+
+function getIndexByProperty(arr, key, value) {
+    return arr.findIndex(obj => obj[key] === value);
+}
+
+console.log(getIndexByProperty(arrayObj, 'prop_1', 'val_5'));    // 1
+
+

@@ -8,4 +8,21 @@
 // Input: obj1: { name: "John", degree: "CS" }, obj2: {name: "Max", age: 23, degree: "CS"}
 // Output: false
 
+const obj1 = { name: "John", age: 23, degree: "CS" };
+const obj2 = { age: 23, degree: "CS" };
+
+function checkobj(obj1, obj2) {
+    for (let key in obj2) {
+        if (obj1[key] !== obj2[key]) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(checkobj(obj1, obj2));
+
+const obj3 = { name: "John", degree: "CS" };
+const obj4 = { name: "Max", age: 23, degree: "CS" };
+console.log(checkobj(obj3, obj4));
+
 
