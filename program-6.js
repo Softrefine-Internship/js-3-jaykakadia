@@ -38,14 +38,15 @@ const arr = [
     },
 ];
 
-function modifyProperty(arr, property, value) {
+function modifyProperty(arr, id, newName) {
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i][property] === value) {
-            arr[i][property] = value;
+        if (arr[i].employee_id === id) {
+            arr[i].employee_name = newName;
         }
     }
     return arr;
 }
-console.log(modifyProperty(arr, "employee_name", "Rahul"));
+
+console.log(modifyProperty(arr, 2, "Rahul"));
 
 

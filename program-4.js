@@ -27,6 +27,6 @@ function getIndexByProperty(arr, key, value) {
     return arr.findIndex(obj => obj[key] === value);
 }
 
-console.log(getIndexByProperty(arrayObj, 'prop_1', 'val_5'));    // 1
+console.log(getIndexByProperty(arrayObj, 'prop_1', 'val_5'));   
 
 
