@@ -13,9 +13,20 @@
 // Output: true
 
 function isAnagram(str1, str2) {
-    let sortedStr1 = str1.split("").sort().join("");
-    let sortedStr2 = str2.split("").sort().join("");
-    return sortedStr1 === sortedStr2;
+     let count = {};
+     
+     for (let i = 0; i < str1.length; i++) {
+       let ch = str1[i];
+       count[ch] = (count[ch] || 0) + 1;
+     }
+
+     for (let i = 0; i < str2.length; i++) {
+       let ch = str2[i];
+
+       if (!count[ch]) return false;
+       count[ch]--;
+     }
+    return true;
 }
 console.log(isAnagram("evil", "vile"));
 console.log(isAnagram("a gentleman", "elegant man"));
